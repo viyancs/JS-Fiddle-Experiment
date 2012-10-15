@@ -208,7 +208,8 @@ $(function(){
            url:'/gh/get/response.json/viyancs/JS-Fiddle-Experiment/tree/master/dropdown/demo/' 
        //see http://doc.jsfiddle.net/use/github_response.html for details
         
-        });
+    });
+    
     $('#dropdown').focus(function() {      
        $(this).vdropdown('show');          
     });
