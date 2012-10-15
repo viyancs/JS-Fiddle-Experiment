@@ -1,4 +1,4 @@
-{ "rows" : [ { "parent1" : [ "i am child 1","i am child 2","i am child 3"],"id":"1" },
-             { "parent2" : [ "i am child 4","i am child 5"],"id" : "2" },
-             { "parent3" : [ "i am child 6","i am child 7","i am child 8"],"id" : "3" },
-             { "parent4" : [ "i am child 1","i am child 2"], "id" : "4" } ] }
+{ "rows" : [ { "provinsi" : "Jawa-Barat" , "kota" : [ "Bandung","Bogor","Purwakarta"],"id":"1" },
+             { "provinsi" : "Jawa-Tengah" ,"kota" : [ "Semarang","Tegal","Yogyakarta","Solo","Pemalang"],"id" : "2" },
+             { "provinsi" : "Jawa-Timur" , "kota" : [ "Banten","Purworejo"],"id" : "3" },
+             { "provinsi" : "DKI-Jakarta" ,"kota" : [ "Jakarta-Selatan","Jakarta-Timur","Jakarta-Utara","Jakarta-Barat","Jakarta-Pusat"], "id" : "4" } ] }
