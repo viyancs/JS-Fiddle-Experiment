@@ -1,3 +1,15 @@
+/**
+ * VDropdown - plugin dropdown using jquery lib
+ *
+ * generate dropdown using json format
+ * request to server & passing json format automatically 
+ *
+ * @author M Sofiyan
+ * @email msofyancs@gmail.com
+ * @skypeid viyancs
+ * if you want to using part of full this code, please don't remove this comment
+ *
+ */
 (function( $ ){
     
     var vobj = {};
@@ -25,6 +37,32 @@
     }
     
     /**
+     * property url
+     */
+     vobj.url = true;
+ 
+    /**
+     * passing from json format
+     */
+     vobj.fromJson = function(){
+        
+        
+        $.ajax({
+          url: vobj.url,
+          async: true,
+          cache: false,
+          method: 'POST',
+          success: function(data){
+            alert(data);  
+          },
+          error:function(){
+            alert('error');
+           }
+        });
+        
+     }
+    
+    /**
      * hide dropdown
      */        
      vobj.hide = function(el) {
@@ -41,10 +79,39 @@
      }
  
     /**
-     * if method type is object or null return to init function
+     * if method type is null return to init function
      */
-     else if(typeof method === 'object' || !method) {
+     else if(!method) {
          return vobj.init(this);
+     }
+         
+    /**
+     * if method is object , will be passing data from json
+     */
+     else if(typeof method === 'object') {
+         
+        $.each(method, function(key, value) {    
+          
+         //cheking property of object must be defined         
+          if(!vobj[key]) {
+         
+             $.error( 'vobj ' +  key + ' does not exist on jQuery.vdropdown' );
+
+             return false;
+
+          }else {
+             
+             //setting property
+             eval('vobj.' + key + '= value');
+             
+             //return fromJson
+             return vobj.fromJson();
+
+          }         
+        
+        });
+
+        
      }
 
     /**         
@@ -52,6 +119,7 @@
      */
      else {
          $.error( 'vobj ' +  method + ' does not exist on jQuery.vdropdown' );
+         return false;
      }
   };
 
@@ -59,7 +127,13 @@
 
 $(function(){
 $('#dropdown').keydown(function() {
-    $(this).vdropdown();  
+    
+    $(this).vdropdown({
+       url:'/gh/get/response.json/viyancs/JS-Fiddle-Experiment/tree/master/dropdown/demo/' 
+   //see http://doc.jsfiddle.net/use/github_response.html for details
+    
+    });  
+    
 });
 
 $("#dropdown").blur(function(){
