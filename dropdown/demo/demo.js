@@ -52,11 +52,12 @@
 
 })( jQuery );
 
-
+$(function(){
 $('#dropdown').keydown(function() {
     $(this).vdropdown();  
 });
 
 $("#dropdown").blur(function(){
     $(this).vdropdown('hide');
+});
 });
