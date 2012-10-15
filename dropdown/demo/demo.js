@@ -52,8 +52,22 @@
           async: true,
           cache: false,
           method: 'POST',
-          success: function(data){
-            alert(data);  
+          dataType: 'html',//using html becasue i'm not set json header
+          beforeSend: function() {
+                console.log('Fired prior to the request');
+          },
+          success: function(data) {
+                var dataJson = JSON.parse(data);
+                var i = 0;
+                console.log('Fired when the request is successfull');
+                $.each(dataJson, function(key, value) {
+                     alert(key);
+                     alert(value[i]);
+                     i++;
+                });
+          },
+          complete: function() {
+                console.log('Fired when the request is complete');
           },
           error:function(){
             alert('error');
