@@ -57,11 +57,13 @@
 
 })( jQuery );
 
-
+$(function(){
 $('#dropdown').keydown(function() {
+    alert('joi');
     $(this).vdropdown();  
 });
 
 $("#dropdown").blur(function(){
     $(this).vdropdown('hide');
+});
 });
