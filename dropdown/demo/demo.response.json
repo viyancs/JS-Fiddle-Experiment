@@ -1,4 +1,4 @@
-{ "rows" : [ { "provinsi" : "Jawa-Barat" , "kota" : [ "Bandung","Bogor","Purwakarta"],"id":"1" },
-             { "provinsi" : "Jawa-Tengah" ,"kota" : [ "Semarang","Tegal","Yogyakarta","Solo","Pemalang"],"id" : "2" },
-             { "provinsi" : "Jawa-Timur" , "kota" : [ "Banten","Purworejo"],"id" : "3" },
-             { "provinsi" : "DKI-Jakarta" ,"kota" : [ "Jakarta-Selatan","Jakarta-Timur","Jakarta-Utara","Jakarta-Barat","Jakarta-Pusat"], "id" : "4" } ] }
+{ "rows" : [ { "provinsi" : "Jawa-Barat" , "kota" : [ { "id":"11" , "name" : "Bandung"},{ "id":"12" , "name" : "Bogor"},{ "id":"13" , "name" : "Purwakarta"}],"id":"1" },
+             { "provinsi" : "Jawa-Tengah" ,"kota" : [ { "id":"14" , "name" : "Semarang"},{ "id":"15" , "name" : "Yogyakarta"},{ "id":"16" , "name" : "Solo"}],"id" : "2" },
+             { "provinsi" : "Jawa-Timur" , "kota" : [ { "id":"17" , "name" : "Banten"}],"id" : "3" },
+             { "provinsi" : "DKI-Jakarta" ,"kota" : [ { "id":"18" , "name" : "Jakarta-Selatan"},{ "id":"19" , "name" : "Jakarta-Utara"},{ "id":"20" , "name" : "Jakarta-Timur"},{ "id":"21" , "name" : "Jakarta-Barat"},{ "id":"22" , "name" : "Jakarta-Pusat"}], "id" : "4" } ] }
