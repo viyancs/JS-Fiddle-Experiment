@@ -1,21 +1,26 @@
 (function( $ ){
     
     var vobj = {};
-    var res = $("<div id='result' class='result'></div>");
+    var res = $("<div class='result'></div>");
+    
     
     /**
      * initializing 
      */
     vobj.init = function(el) {
         
-        res.css('display','block');
-        res.css('position','relative');
-        res.css('left',el.css('left'));
-        res.css('top',el.css('top'));  
-        res.css('z-index',1000); 
-        res.css('width',el.css('width')); 
-        res.css('height',el.css('height'));  
+        //init css
+        var css = [{
+        'display':'block',
+        'position':'relative',
+        'left':el.css('left'),
+        'top':el.css('top'),
+        'z-index':1000,
+        'width':el.css('width'),
+        'height':el.css('height')
+        }]; 
         
+        res.css(css[0]);
         res.appendTo('body');
     }
     
@@ -52,12 +57,11 @@
 
 })( jQuery );
 
-$(function(){
+
 $('#dropdown').keydown(function() {
     $(this).vdropdown();  
 });
 
 $("#dropdown").blur(function(){
     $(this).vdropdown('hide');
-});
 });
