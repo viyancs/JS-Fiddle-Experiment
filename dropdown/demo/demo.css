@@ -1,20 +1,29 @@
 .dropdown {
     left:160px;
-    top:20px;  
+    top:20px;
     position:relative;
     width:200px;
     height:20px;
      
   }
 
-  .result { 
-      border : 1px solid #ccc;
-      background-color:grey;
-      width:200px;
-      height:100px;
-      overflow:auto;
-  }
-​ .row-parent {
+.result { 
+    border : 1px solid #ccc;
+      /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+    width:200px;
+    height:100px;
+    overflow:auto;
+ }
+
+​.row-parent {
      padding:5px;
  }
  .row-parent a {
