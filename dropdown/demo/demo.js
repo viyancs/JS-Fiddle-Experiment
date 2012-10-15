@@ -14,6 +14,7 @@
     
     var vobj = {};
     var res = $("<div class='result'></div>");
+    var tmpl  = '';
     
     
     /**
@@ -29,7 +30,8 @@
         'top':el.css('top'),
         'z-index':1000,
         'width':el.css('width'),
-        'height':el.css('height')
+        'height':'200px',
+        'overflow':'auto'
         }]; 
         
         res.css(css[0]);
@@ -46,9 +48,9 @@
      */
      vobj.fromJson = function(){
         
-        
+        //request to server
         $.ajax({
-          url: vobj.url,
+          url: this.url,
           async: true,
           cache: false,
           method: 'POST',
@@ -57,14 +59,25 @@
                 console.log('Fired prior to the request');
           },
           success: function(data) {
+    
                 var dataJson = JSON.parse(data);
-                var i = 0;
+                var dataTmpl = '';
                 console.log('Fired when the request is successfull');
-                $.each(dataJson, function(key, value) {
-                     alert(key);
-                     alert(value[i]);
-                     i++;
+                
+                //parsing json data
+                $.each(dataJson.rows, function(i, valObj) {
+                    $.each(valObj,function(key,val) {
+                        dataTmpl = vobj.createTempl(key,val);
+                    });
                 });
+                
+                //clear html
+                res.html('');
+                res.html(dataTmpl);
+                
+                //clear templ
+                tmpl = '';
+                    
           },
           complete: function() {
                 console.log('Fired when the request is complete');
@@ -72,10 +85,28 @@
           error:function(){
             alert('error');
            }
-        });
-        
+        });  
      }
     
+    /**
+     * generate template dropdown 
+     */
+     vobj.createTempl = function(key,val) {
+         
+        tmpl += '<div id="12" class="row-parent" >';
+        tmpl += '<a href="#tid"><img src="#" width="16px" height="16px">'+ key +'</a>';
+        $.each(val,function(i,value) {
+             tmpl += '<div class="row-child">'; 
+             tmpl += '<a href="#3"><img src="#" width="16px" height="16px">';
+             tmpl += value;
+             tmpl += '</a>';
+             tmpl += '</div>';            
+        });
+        tmpl += '</div>';
+        
+        return tmpl;
+     }
+         
     /**
      * hide dropdown
      */        
@@ -85,6 +116,8 @@
 
   $.fn.vdropdown = function(method) {
      
+     var el = this;
+
     /**
      * handling statement to execute vobj function  from parameter method
      */       
@@ -115,6 +148,9 @@
 
           }else {
              
+             //calling init function
+             vobj.init(el);
+
              //setting property
              eval('vobj.' + key + '= value');
              
