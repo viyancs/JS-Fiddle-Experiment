@@ -46,7 +46,7 @@
     /**
      * passing from json format
      */
-     vobj.fromJson = function(){
+     vobj.fromJson = function(el){
         
         //request to server
         $.ajax({
@@ -77,6 +77,23 @@
                 
                 //clear templ
                 tmpl = '';
+
+                //trigering element by class name
+                $('.row-parent').click(function(e) {
+                    
+                    var val = $(this).find('>:first-child').text();                    
+                    el.val(val);
+                    e.stopPropagation();
+                    
+                });
+
+                $('.row-child').click(function(e) {
+                    
+                    var val = $(this).find('>:first-child').text();                    
+                    el.val(val);
+                    e.stopPropagation(); 
+                    
+                });
                     
           },
           complete: function() {
@@ -111,14 +128,14 @@
      * hide dropdown
      */        
      vobj.hide = function(el) {
-        res.fadeOut(1500);
+        res.slideUp(1500);
      }
      
     /**
      * show dropdown
      */        
      vobj.show = function(el) {
-        res.fadeIn(1500);
+        res.slideDown(1500);
      }
 
   $.fn.vdropdown = function(method) {
@@ -153,7 +170,7 @@
 
              return false;
 
-          }else {
+          } else {
              
              //calling init function
              vobj.init(el);
@@ -162,7 +179,7 @@
              eval('vobj.' + key + '= value');
              
              //return fromJson
-             return vobj.fromJson();
+             return vobj.fromJson(el);
 
           }         
         
