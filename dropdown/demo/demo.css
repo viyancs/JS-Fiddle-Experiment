@@ -7,8 +7,8 @@
      
   }
 
-.result { 
-    border : 1px solid #ccc;
+  .result { 
+      border : 1px solid #ccc;
       /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
@@ -18,12 +18,11 @@
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 
-    width:200px;
-    height:100px;
-    overflow:auto;
- }
-
-​.row-parent {
+      width:200px;
+      height:100px;
+      overflow:auto;
+  }
+​ .row-parent {
      padding:5px;
  }
  .row-parent a {
@@ -45,4 +44,3 @@
  .row-parent a:hover {
      background-color:#dbdbdb;
  }
-​
