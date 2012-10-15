@@ -13,4 +13,4 @@ $('#dropdown').keydown(function() {
 $("#dropdown").blur(function(){
       result.fadeOut(1500);
 });
-))
+
