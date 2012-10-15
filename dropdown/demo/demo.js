@@ -24,7 +24,7 @@
         
         //init css
         var css = [{
-        'display':'block',
+        'display':'none',
         'position':'relative',
         'left':el.css('left'),
         'top':el.css('top'),
@@ -113,6 +113,13 @@
      vobj.hide = function(el) {
         res.fadeOut(1500);
      }
+     
+    /**
+     * show dropdown
+     */        
+     vobj.show = function(el) {
+        res.fadeIn(1500);
+     }
 
   $.fn.vdropdown = function(method) {
      
@@ -176,17 +183,18 @@
 })( jQuery );
 
 $(function(){
-$('#dropdown').keydown(function() {
     
-    $(this).vdropdown({
-       url:'/gh/get/response.json/viyancs/JS-Fiddle-Experiment/tree/master/dropdown/demo/' 
-   //see http://doc.jsfiddle.net/use/github_response.html for details
+    //generate dropdown list   
+    $('#dropdown').vdropdown({
+           url:'/gh/get/response.json/viyancs/JS-Fiddle-Experiment/tree/master/dropdown/demo/' 
+       //see http://doc.jsfiddle.net/use/github_response.html for details
+        
+        });
+    $('#dropdown').focus(function() {      
+       $(this).vdropdown('show');                    
+    });
     
-    });  
-    
-});
-
-$("#dropdown").blur(function(){
-    $(this).vdropdown('hide');
-});
+    $("#dropdown").blur(function(){
+        $(this).vdropdown('hide');
+    });
 });
