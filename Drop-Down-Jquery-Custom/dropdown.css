@@ -1,0 +1,14 @@
+.dropdown {
+    left:160px;
+     top:20px;
+      position:relative;
+       width:200px;
+        height:20px;
+     
+  }
+
+  .result { 
+      border : 1px solid #ccc;
+       background-color:grey;
+        display:none;
+  }

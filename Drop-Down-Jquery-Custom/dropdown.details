@@ -1,0 +1,14 @@
+Everything before the line containing only '---' will not be parsed
+
+---
+name: Drop-Down-Jquery-Custom
+description: generating custom drop-down menu usng jquery and communicate to server
+authors:
+   - viyancs
+resources:
+   - dropdown.js
+   - datas.json
+   - dropdown.css
+...
+
+Everything after the line containing only '...' will not be parsed
