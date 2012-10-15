@@ -67,7 +67,9 @@
                 //parsing json data
                 $.each(dataJson.rows, function(i, valObj) {
                     $.each(valObj,function(key,val) {
-                        dataTmpl = vobj.createTempl(key,val);
+                        alert(eval('valObj[key]'));
+                        dataTmpl = vobj.createTempl(valObj,key,val);
+                        
                     });
                 });
                 
@@ -108,10 +110,10 @@
     /**
      * generate template dropdown 
      */
-     vobj.createTempl = function(key,val) {
-         
-        tmpl += '<div id="12" class="row-parent" >';
-        tmpl += '<a href="#tid"><img src="#" width="16px" height="16px">'+ key +'</a>';
+     vobj.createTempl = function(valObj,key,val) {
+        
+        tmpl += '<div id="' + valObj.id +'" class="row-parent" >';
+        tmpl += '<a href="#' + valObj.id +'"><img src="#" width="16px" height="16px">'+ key +'</a>';
         $.each(val,function(i,value) {
              tmpl += '<div class="row-child">'; 
              tmpl += '<a href="#3"><img src="#" width="16px" height="16px">';
