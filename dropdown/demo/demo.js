@@ -66,11 +66,7 @@
                 
                 //parsing json data
                 $.each(dataJson.rows, function(i, valObj) {
-                    $.each(valObj,function(key,val) {
-                        alert(eval('valObj[key]'));
-                        dataTmpl = vobj.createTempl(valObj,key,val);
-                        
-                    });
+                    dataTmpl = vobj.createTempl(valObj);
                 });
                 
                 //clear html
@@ -83,16 +79,20 @@
                 //trigering element by class name
                 $('.row-parent').click(function(e) {
                     
-                    var val = $(this).find('>:first-child').text();                    
-                    el.val(val);
+                    var val = $(this).find('>:first-child');                    
+                    el.val(val.text());
+                    el.attr('data-value',$(this).attr('id'));
+                    
                     e.stopPropagation();
                     
                 });
 
                 $('.row-child').click(function(e) {
                     
-                    var val = $(this).find('>:first-child').text();                    
-                    el.val(val);
+                    var val = $(this).find('>:first-child');                    
+                    el.val(val.text());
+                    el.attr('data-value',val.parent().attr('id'));
+                    
                     e.stopPropagation(); 
                     
                 });
@@ -110,14 +110,14 @@
     /**
      * generate template dropdown 
      */
-     vobj.createTempl = function(valObj,key,val) {
+     vobj.createTempl = function(valObj) {
         
         tmpl += '<div id="' + valObj.id +'" class="row-parent" >';
-        tmpl += '<a href="#' + valObj.id +'"><img src="#" width="16px" height="16px">'+ key +'</a>';
-        $.each(val,function(i,value) {
-             tmpl += '<div class="row-child">'; 
-             tmpl += '<a href="#3"><img src="#" width="16px" height="16px">';
-             tmpl += value;
+        tmpl += '<a href="#' + valObj.id +'"><img src="#" width="16px" height="16px">'+ valObj.provinsi +'</a>';
+        $.each(valObj.kota,function(i,value) {
+             tmpl += '<div class="row-child" id="' + value.id + '">'; 
+             tmpl += '<a href="#row-' + value.id + '"><img src="#" width="16px" height="16px">';
+             tmpl += value.name;
              tmpl += '</a>';
              tmpl += '</div>';            
         });
@@ -202,7 +202,7 @@
 })( jQuery );
 
 $(function(){
-    
+
     //generate dropdown list   
     $('#dropdown').vdropdown({
            url:'/gh/get/response.json/viyancs/JS-Fiddle-Experiment/tree/master/dropdown/demo/' 
@@ -210,10 +210,26 @@ $(function(){
         
         });
     $('#dropdown').focus(function() {      
-       $(this).vdropdown('show');                    
+       $(this).vdropdown('show');          
     });
     
     $("#dropdown").blur(function(){
         $(this).vdropdown('hide');
     });
+    
+    $("#getId").click(function(){
+        
+       var val = $("#dropdown").attr('data-value');
+        
+        if(typeof val === 'undefined') {
+            
+           alert('please select locations');
+            
+        }else {
+        
+           alert(val);                
+        
+        }
+    });
+    
 });
