@@ -59,7 +59,6 @@
 
 $(function(){
 $('#dropdown').keydown(function() {
-    alert('joi');
     $(this).vdropdown();  
 });
 
