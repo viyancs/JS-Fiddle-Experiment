@@ -1,14 +1,39 @@
 .dropdown {
     left:160px;
-     top:20px;
-      position:relative;
-       width:200px;
-        height:20px;
+    top:20px;  
+    position:relative;
+    width:200px;
+    height:20px;
      
   }
 
   .result { 
       border : 1px solid #ccc;
-       background-color:grey;
-        display:none;
+      background-color:grey;
+      width:200px;
+      height:100px;
+      overflow:auto;
   }
+​ .row-parent {
+     padding:5px;
+ }
+ .row-parent a {
+    text-decoration:none;
+    text-style : bold
+ }
+ .row-child{
+    margin-top:5px;
+    margin-left:15px;
+ }
+ .row-child a {
+    font-size : 15px;
+ }
+ 
+ .row-child:hover {
+    background-color:#dbdbdb;
+ }
+
+ .row-parent a:hover {
+     background-color:#dbdbdb;
+ }
+​
