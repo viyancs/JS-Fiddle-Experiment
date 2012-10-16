@@ -4,12 +4,12 @@
     position:relative;
     width:200px;
     height:20px;
-     
-  }
 
-  .result { 
-      border : 1px solid #ccc;
-      /* Fallback for web browsers that doesn't support RGBa */
+}
+
+.result-dropdown { 
+    border : 1px solid #ccc;
+    /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
     background: rgba(0, 0, 0, 0.6);
@@ -18,29 +18,29 @@
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 
-      width:200px;
-      height:100px;
-      overflow:auto;
-  }
-​ .row-parent {
-     padding:5px;
- }
- .row-parent a {
+    width:200px;
+    height:100px;
+    overflow:auto;
+}
+.row-parent {
+    padding:5px;
+}
+.row-parent a {
     text-decoration:none;
     text-style : bold
- }
- .row-child{
+}
+.row-child{
     margin-top:5px;
     margin-left:15px;
- }
- .row-child a {
+}
+.row-child a {
     font-size : 15px;
- }
- 
- .row-child:hover {
-    background-color:#dbdbdb;
- }
+}
 
- .row-parent a:hover {
-     background-color:#dbdbdb;
- }
+.row-child:hover {
+    background-color:#dbdbdb;
+}
+
+.row-parent a:hover {
+    background-color:#dbdbdb;
+}
