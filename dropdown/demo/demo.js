@@ -88,7 +88,7 @@
                     el.attr('data-value',$(this).attr('id'));
                     
                     //think again
-                    $("#lokasi").val($(this).attr('id'));
+                    //$("#lokasi").val($(this).attr('id'));
                     
                     e.stopPropagation();
                     
@@ -99,7 +99,7 @@
                     var val = $(this).find('>:first-child');                    
                     el.val(val.text());
                     el.attr('data-value',val.parent().attr('id'));
-                    $("#lokasi").val($(this).attr('id'));
+                    //$("#lokasi").val($(this).attr('id'));
                     
                     e.stopPropagation(); 
                     
