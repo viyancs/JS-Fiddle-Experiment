@@ -24,3 +24,7 @@ about [Sort on Programming] (http://www.squidoo.com/sorting-algorithms)<br/>
 video [Quick-Sort-video](www.youtube.com/watch?v=ywWBy6J5gz8&feature=relmfu)<br/>
 video [Quick-Sort vs Buble Sort](http://youtube.com/watch?v=KMZ_N1PsF4U)<br/>
 
+Demo
+-----
+<br/>
+Quicksort [Demo page] (http://jsfiddle.net/gh/get/jquery/1.8.2/viyancs/JS-Fiddle-Experiment/tree/master/sorting/quick-sort/demo/)
