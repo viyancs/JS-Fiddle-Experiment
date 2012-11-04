@@ -16,25 +16,12 @@ Algorithm
 Usage
 -----
 <pre>
-$data = array(5,23,3,5,8,1,0,3,8,9,11,15);
-print_r(vquicksort($data));
+ var data =  [4,3,6,8,5,12,14,10,4,8,3,19];
+ var sortData = $.vsort(data);
+ console.log(sortData);
 
-//after sorting
-Array
-(
-    [0] => 0
-    [1] => 1
-    [2] => 3
-    [3] => 3
-    [4] => 5
-    [5] => 5
-    [6] => 8
-    [7] => 8
-    [8] => 9
-    [9] => 11
-    [10] => 15
-    [11] => 23
-)
+ //result data after sorting
+ [3, 3, 4, 4, 5, 6, 8, 8, 10, 12, 14, 19] 
 </pre>
 
 Tested
