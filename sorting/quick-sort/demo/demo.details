@@ -1,0 +1,10 @@
+---
+name: Quick-Sort
+description: sorting by quicksort metode 
+authors:
+  - viyancs
+resouces:
+  - quicksort.js
+...
+
+
