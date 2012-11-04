@@ -13,6 +13,43 @@ Algorithm
    <li> return as merge less values, pivot , and higher values to one array </li>
 </ol>
 
+Usage
+-----
+<pre>
+$data = array(5,23,3,5,8,1,0,3,8,9,11,15);
+print_r(vquicksort($data));
+
+//after sorting
+Array
+(
+    [0] => 0
+    [1] => 1
+    [2] => 3
+    [3] => 3
+    [4] => 5
+    [5] => 5
+    [6] => 8
+    [7] => 8
+    [8] => 9
+    [9] => 11
+    [10] => 15
+    [11] => 23
+)
+</pre>
+
+Tested
+------
+<ol>
+<li> result numbers on array is good</li> 
+<li> result with number,character . number will be place on first before character </li>
+<li> result character on array is good </li>
+<li> other , i hope any someone can tested with more complex data, and if have bugs please create issue and i will try to fix that </li>
+</ol>
+
+Demo
+-----
+Quicksort [Demo page] (http://jsfiddle.net/gh/get/jquery/1.8.2/viyancs/JS-Fiddle-Experiment/tree/master/sorting/quick-sort/demo/)
+
 Reference
 ---------
 about [Quick-Sort](en.wikipedia.org/wiki/Quicksort) <br/>
@@ -20,6 +57,3 @@ about [Sort on Programming] (http://www.squidoo.com/sorting-algorithms)<br/>
 video [Quick-Sort-video](www.youtube.com/watch?v=ywWBy6J5gz8&feature=relmfu)<br/>
 video [Quick-Sort vs Buble Sort](http://youtube.com/watch?v=KMZ_N1PsF4U)<br/>
 
-Demo
------
-Quicksort [Demo page] (http://jsfiddle.net/gh/get/jquery/1.8.2/viyancs/JS-Fiddle-Experiment/tree/master/sorting/quick-sort/demo/)
