@@ -4,7 +4,7 @@ description: sorting by quicksort metode
 authors:
   - viyancs
 resouces:
-  - quicksort.js
+  - demo.js
 ...
 
 
