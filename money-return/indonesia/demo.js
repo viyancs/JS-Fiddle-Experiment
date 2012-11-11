@@ -1,18 +1,12 @@
 /**
- * moneyReturn is function for return money after we are paying price , example price 20000 and pay with 100000, and will be show optimum opportunities, i'm using indonesian format price.
+ * moneyReturn is function for return money after we are paying price , 
+ * example price 1000 and pay with 12000, and will be show optimum opportunities, 
+ * will be return 10000 1 and 1000 1, total return is 11000
+ * i'm using indonesian format price.
  * 
  * @author M Sofiyan
  * @email msofyancs@gmail.com
  * @skypeid viyancs
- * @url https://github.com/viyancs/JS-Fiddle-Experiment/tree/master/sort/quick-sort
- * @reference
-     article : 
-        http://en.wikipedia.org/wiki/Quicksort
-        http://www.squidoo.com/sorting-algorithms
-    video : 
-        http://www.youtube.com/watch?v=ywWBy6J5gz8&feature=relmfu (it's so funny video i think, but with that, people can be easily to understand quicksort.)
-        http://www.youtube.com/watch?v=KMZ_N1PsF4U ( this video will be compare quicksort vs buble sort)
- *
  * @important
  * if you want to using part of full this code, please don't remove this comment
  */ 
