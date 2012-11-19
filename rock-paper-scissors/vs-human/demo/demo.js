@@ -17,3 +17,6 @@ function whoIsWin(a,b) {
     else if(a === SCISSORS && b === PAPER) return WIN;
     else return ERR;
 }
+
+var who = whoIsWin(ROCK,PAPER);
+console.log(who);
