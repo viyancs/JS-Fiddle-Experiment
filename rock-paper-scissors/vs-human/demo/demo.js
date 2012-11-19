@@ -6,12 +6,7 @@ var WIN = 'Win';
 var DRAW = 'Draw';
 var ERR = 'Incorect Value';
 
-function whoIsWin(a) {
-    
-    var rps = [ROCK,PAPER,SCISSORS];
-    var random = rps.sort(shuffle); //sorting to random
-    var b = random[0];
-    console.log('computer is ' = b);
+function whoIsWin(a,b) {
 
     if(a === b) return DRAW;
     else if(a === ROCK && b === PAPER) return LOSE;
@@ -22,10 +17,3 @@ function whoIsWin(a) {
     else if(a === SCISSORS && b === PAPER) return WIN;
     else return ERR;
 }
-
-function shuffle(a,b) {
-	return Math.random() > 0.5 ? -1 : 1;
-}
-
-var who = whoIsWin(ROCK);
-console.log(who);
