@@ -11,7 +11,7 @@ function whoIsWin(a) {
     var rps = [ROCK,PAPER,SCISSORS];
     var random = rps.sort(shuffle); //sorting to random
     var b = random[0];
-    console.log(b);
+    console.log('computer is ' = b);
 
     if(a === b) return DRAW;
     else if(a === ROCK && b === PAPER) return LOSE;
