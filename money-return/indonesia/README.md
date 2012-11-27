@@ -58,7 +58,7 @@ Greedy Algorithm in my opinion is algorithm to finding and solving about optimiz
 </ol>
 <strong>Cases of failure</strong>
 
-as I said before , we have money Rp 10.000,00 for pay Rp 2000,00 and we get the return money Rp 8000,00 , case failure is return money Rp 50,00 (160 pieces)
+as I said before , we have money Rp 10.000,00 for pay Rp 2000,00 and we get the return money Rp 8000,00 , case failure is return money Rp 50,00 (160 coins)
 that is terrible if use on real life.
 
 Problem Solving
