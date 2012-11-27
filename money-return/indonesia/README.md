@@ -34,7 +34,7 @@ Price of goods is Rp 2000,00 , we have money for pay is Rp 10.000,00 return mone
 
 Price of goods is Rp 2000,00 , we have money for pay is Rp 10.000,00 return money is Rp 8000,00 with description like this
 <ul>
-	<li>Rp 50,00 160 pieces</li>
+	<li>Rp 50,00 160 coins</li>
 </ul>
 Theoretical
 ------------
