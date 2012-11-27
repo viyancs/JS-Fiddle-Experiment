@@ -55,25 +55,25 @@ function moneyReturn(price,pay) {
     
     for(i=0; i< money.length;i++) {
         
-        //filter devide not more big than fixReturn
-        if(money[i] <= fixReturn) {
-            
-            var opportunities = fixReturn / money[i]; //generate opportunities 
+        if(money[i] > fixReturn) {
+            continue;
+        }
+                    
+        var opportunities = fixReturn / money[i]; //generate opportunities 
 
-            if(opportunities % 1 === 0) {
-                fixReturn = fixReturn - money[i] * opportunities;
-                returnMoney[money[i]] = opportunities;
-            } 
+        if(opportunities % 1 === 0) {
+            fixReturn = fixReturn - money[i] * opportunities;
+            returnMoney[money[i]] = opportunities;
+        } 
             
-            else {
+        else {
                 
-                fixReturn = fixReturn - money[i] * Math.floor(opportunities);
-                returnMoney[money[i]] = Math.floor(opportunities);
+            fixReturn = fixReturn - money[i] * Math.floor(opportunities);
+            returnMoney[money[i]] = Math.floor(opportunities);
 
-            }
-            
-        }                
-             if(fixReturn < money[10] && fixReturn != 0) info = "we don't have money for pay " + fixReturn; 
+        }
+                        
+       if(fixReturn < money[10] && fixReturn != 0) info = "we don't have money for pay " + fixReturn; 
     }
     
     return returnMoney;
