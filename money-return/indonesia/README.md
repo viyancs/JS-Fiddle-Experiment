@@ -46,6 +46,9 @@ from the above explanation we can found the main problem is about Optimization (
 
 <b>About Greedy Algorithm</b>
 <blockquote>A greedy algorithm is an algorithm that follows the problem solving heuristic of making the locally optimal choice at each stage[1] with the hope of finding a global optimum. <em><b>http://en.wikipedia.org/wiki/Greedy_algorithm</b></em></blockquote>
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Greedy-search-path-example.gif" />
+
 Greedy Algorithm in my opinion is algorithm to finding and solving about optimization problem using all the possibilities that could be happen.
 
 <b>Characteristic Greedy Algorithm </b>
@@ -60,6 +63,7 @@ Greedy Algorithm in my opinion is algorithm to finding and solving about optimiz
 
 as I said before , we have money Rp 10.000,00 for pay Rp 2000,00 and we get the return money Rp 8000,00 , case failure is return money Rp 50,00 (160 pieces)
 that is terrible if use on real life.
+
 
 Problem Solving
 ----------------
